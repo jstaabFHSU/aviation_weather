@@ -4,8 +4,6 @@ import requests
 
 airport = input("Enter airport call sign: ") #Ex. KLWC for Lawrence
 airport.upper()
-
-# three lines make the '%s' easier to see (which is the airport)
 url = ("""https://aviationweather.gov/adds/tafs/?station_ids=
 %s
 &std_trans=translated&submit_both=Get+TAFs+and+METARs""" % (airport))
