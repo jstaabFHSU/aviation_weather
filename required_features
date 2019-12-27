@@ -1,0 +1,8 @@
+The following is a list of features and associated scopes of work that must be addressed for project completion.
+
+1) python script must be incorporated into and called by a web framework (most likely Flask)
+2) create user input form that sends data to python script
+3) generate emails confirming upcoming flightlog entries upon completion of above form
+4) generate emails one hour prior to logged flight times
+5) the script utilizes the email address yourflightweather@gmail.com and must allow python to login to email account
+   without exposing password or requiring manual entry.
