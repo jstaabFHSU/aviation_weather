@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import requests
 
 airport = input("Enter airport call sign: ") #Ex. KLWC for Lawrence
+airport.upper()
 
 # three lines make the '%s' easier to see (which is the airport)
 url = ("""https://aviationweather.gov/adds/tafs/?station_ids=
@@ -10,10 +11,10 @@ url = ("""https://aviationweather.gov/adds/tafs/?station_ids=
 &std_trans=translated&submit_both=Get+TAFs+and+METARs""" % (airport))
 response = requests.get(url)
 soup = BeautifulSoup(response.text, "html.parser")
-METAR = soup.findAll('strong')[1] #2nd <strong> is METAR as of 12/26/2019
+METAR = soup.findAll('strong')[1].text #2nd <strong> is METAR as of 12/26/2019
 
 
-print(test1)
+print(METAR)
 
 
 sender_email = "yourflightweather@gmail.com"
