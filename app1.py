@@ -22,7 +22,7 @@ receiver_email = "jake@staab.dev"
 message = str(METAR)
 smtp_server = "smtp.gmail.com"
 port = 465
-password = 'Lp2K99^0_|q'
+password = '' # need to determine how to make login secure
 context = ssl.create_default_context()
 
 def send_email():
