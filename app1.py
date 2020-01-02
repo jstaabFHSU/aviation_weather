@@ -7,7 +7,7 @@ import requests
 from forms import RegistrationForm, LoginForm
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'sdkjnw4o98ryuawef(*Lzsd09wfh'
+app.config['SECRET_KEY'] = 'sdkjnw4o98ryuawef(*Lzsd09wfh' # need to understand how to make this secure
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
 db = SQLAlchemy(app)
 
