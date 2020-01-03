@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Aviation Weather</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<h1>Welcome to Aviation Weather!</h1>
+	<a href="{{ url_for('register') }}">Sign Up</a><br>
+	<a href="{{ url_for('login') }}">Login</a><br>
+	<div>
+		{% block content %}
+
+		{% endblock content %}
+	</div>
+</body>
+</html>
