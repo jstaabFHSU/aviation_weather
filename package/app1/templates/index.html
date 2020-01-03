@@ -10,8 +10,9 @@
 	<a href="{{ url_for('register') }}">Sign Up</a><br>
 	<a href="{{ url_for('login') }}">Login</a><br>
 	<div>
+		<h2>The current METAR for Lawrence, KS is:</h2><br>
 		{% block content %}
-
+			{{ metar }}
 		{% endblock content %}
 	</div>
 </body>
