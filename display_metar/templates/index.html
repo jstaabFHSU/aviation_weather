@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Form Test</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<h1>Welcome to Aviation Weather!</h1>
+	<h2>Sign up to get METAR alerts via email before your scheduled flight.</h2>
+	<div>
+		<form method="POST" action="">
+			<fieldset>
+				<legend>Join Today</legend>
+				<div>
+					{{ form.callsign.label(class="form-control-label") }}
+					{{ form.callsign(class="form-control form-control-lg") }}
+				</div>
+				<div>
+					{{ form.submit.label(class="form-control-label") }}
+					{{ form.submit(class="form-control form-control-lg") }}
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<div>
+		{% block content %}
+			{% if metar != '' %}
+				The current METAR for {{ request.form.get('callsign') }} is:<br>
+				{{ metar }}
+			{% endif %}
+		{% endblock content %}
+	</div>
+</body>
+</html>
