@@ -7,13 +7,3 @@ Users will need to create profiles in order to login and submit their flight inf
 
 Users will enter upcoming flight dates, times, and which airports will be used. They will then receive an email one hour
 prior to each flight (this timeframe can be adjusted) that provides METAR info taken from www.aviationweather.gov.
-
-
-Required Packages:
-------------------
-beautifulsoup4
-Flask
-Flask-SQLAlchemy
-requests
-SQLAlchemy
-WTForms
