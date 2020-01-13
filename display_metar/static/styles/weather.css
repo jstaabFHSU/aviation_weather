@@ -1,0 +1,28 @@
+body { background-image: linear-gradient(#90C7E3, #FFFFFF);
+	   background-repeat: no-repeat;
+	   font-family: Verdana; }
+
+
+main { text-align: center;
+	   background-color: #D2D2D2; }
+
+
+footer { background-color: #FFFFFF;
+         text-align: center;
+		 font-family: Verdana;
+		 color: #000000; }
+
+
+h1 { font-family: Verdana;
+	 font-size: 150%;
+	 color: #FFFFFF; }
+
+
+h3 { font-family: Verdana;
+	 color: #000000; }
+
+#metarcolors { background-color: green;
+               color: white; }
+
+.fieldset-auto-width {
+         display: inline-block; }
