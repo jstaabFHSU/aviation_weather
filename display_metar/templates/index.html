@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Form Test</title>
+	<title>Aviation Weather</title>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="{{ url_for('static',filename='styles/weather.css') }}">
 </head>
-<body>
-	<h1>Welcome to Aviation Weather!</h1>
-	<h2>Sign up to get METAR alerts via email before your scheduled flight.</h2>
+<body align="center">
+	<h1>Welcome to Aviation Weather!</h1><br><br>
+	<h3>Enter airport callsign to get instant aviation weather reports.</h3>
 	<div>
 		<form method="POST" action="">
-			<fieldset>
-				<legend>Join Today</legend>
+			{{ form.hidden_tag() }}
+			<fieldset class="fieldset-auto-width">
+				<legend>Airport</legend>
 				<div>
 					{{ form.callsign.label(class="form-control-label") }}
 					{{ form.callsign(class="form-control form-control-lg") }}
 				</div>
 				<div>
-					{{ form.submit.label(class="form-control-label") }}
 					{{ form.submit(class="form-control form-control-lg") }}
 				</div>
 			</fieldset>
@@ -26,10 +27,17 @@
 	<div>
 		{% block content %}
 			{% if metar != '' %}
-				The current METAR for {{ request.form.get('callsign') }} is:<br>
+				<br>The current METAR for {{ request.form.get('callsign') }} is:<br><br>
+				<div id="metarcolors">
 				{{ metar }}
+				</div>
 			{% endif %}
 		{% endblock content %}
 	</div>
+<br><br><br><br>
 </body>
+<footerS>
+	Aviation Weather<br>
+	Copryright &copy; 2020 Jake Staab
+</footerS>
 </html>
