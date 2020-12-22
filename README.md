@@ -1,5 +1,7 @@
 # aviation_weather
 
+working app: www.aviation.jakestaab.com
+
 The purpose of this program is for pilots to receive automated emails at set time intervals prior to scheduled flights
 that contain important weather information.
 
